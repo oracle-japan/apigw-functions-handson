@@ -1,0 +1,129 @@
+
+@font-face {
+	font-family: OracleSans-Bold;
+	src: url('fonts/OracleSans_A_Bd.ttf')
+}
+
+@font-face {
+	font-family: OracleSans-Regular;
+	src: url('fonts/OracleSans_A_Rg.ttf')
+}
+
+@font-face {
+	font-family: OracleSans-SemiBold;
+	src: url('fonts/OracleSans_A_SBd.ttf')
+}
+
+html{
+	font-family: OracleSans-Regular;
+	font-size: 14px;
+}
+
+.leftPannel{
+	background: url(images/menuBg.png);
+	background-size: cover;
+	min-height: 100vh;
+	text-align: center;
+}
+
+
+.oj-web-applayout-content {
+	padding: 0px;
+}
+
+.oj-web-applayout-max-width {
+	max-width: 100%;
+}
+
+.backBg{
+	background:url(images/background.png);
+	background-size: cover;
+	min-height: 100vh;
+	background-repeat: repeat;
+}
+
+.center{
+	text-align: center;
+}
+.marginAuto{
+	margin: auto;
+}
+
+.rightWin{
+	margin: 30px;
+	/* margin-top: 10vh; */
+	padding: 0px 20px 20px 20px;
+	border: 1px solid white;
+	border-radius: 20px;
+	background: #fff;
+}
+
+@media (max-width: 768px) {
+	.leftPannel {
+		display: none;
+	}
+}
+
+input[type=text] , input[type=tel] , input[type=url]{
+	padding-left: 5px;
+	margin-top: 5px;
+	height: 36px;
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	min-width: 280px;
+}
+
+input[type=button]{
+	margin-top: 5px;
+	height: 36px;
+	background: #e2864e;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid #e2864e;
+	min-width: 280px;
+	font-weight: 500
+}
+
+.rightWin .col-md-6{
+	margin-top: 20px;
+}
+
+.imgContainer{
+	width: 280px;
+	display: block;
+	text-align: center;
+	position: relative;
+}
+
+
+.mylogo{
+	margin-top: 30px;
+}
+
+
+
+.mylogo img{
+	max-width: 120px;
+}
+
+.warningW{
+	width: 100%;
+	text-align: right;
+	color: red;
+	font-size: 10px;
+	padding-right: 30px;
+}
+
+.qrSub{
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	top: 85px;
+	left: calc(50% + 40px);
+}
+
+
+.hide{
+	display: none;
+	height: 146px;
+}

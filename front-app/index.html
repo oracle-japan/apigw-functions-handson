@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Oracle Functions</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+
+<div style="display: flex;flex-wrap: wrap;">
+    <div class="col-md-2 col-sm-0 leftPannel">
+        <div class="mylogo">
+            <img src="css/images/logo.png">
+        </div>
+    </div>
+    <div class="col-md-10 col-sm-12 backBg">
+        <div class="rightWin">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <p>メッセージ：<br>
+                        <input type="text" name="message" id="msg1"></p>
+                    <p><input type="button" value="QRコード生成 " id="button1"></p>
+                    <div class="hide" id="qrCon1">
+                        <p>メッセージQRコード：</p>
+                        <a class="imgContainer" id="qrSub1">
+                            <img id="qr1" src="css/images/blank.png"/>
+                            <img src="css/images/dnload.png" class="qrSub"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <p>電話番号：<br>
+                        <input type="tel" name="usrtel" id="msg2" onkeyup="value=value.replace(/[^\d]/g,'')"
+                               maxlength=12>
+                    <p><input type="button" value="QRコード生成 " id="button2"></p>
+                    <div class="hide" id="qrCon2">
+                        <p>電話番号QRコード：</p>
+                        <a class="imgContainer" id="qrSub2">
+                            <img id="qr2" src="css/images/blank.png"/>
+                            <img src="css/images/dnload.png" class="qrSub"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <p>Webページ：<br>
+                        <input type="url" name="homepage" id="msg3">
+                    <p><input type="button" value="QRコード生成 " id="button3"></p>
+                    <div class="hide" id="qrCon3">
+                        <p>WebページQRコード：</p>
+                        <a class="imgContainer" id="qrSub3">
+                            <img id="qr3" src="css/images/blank.png"/>
+                            <img src="css/images/dnload.png" class="qrSub"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <p>SMS通知番号を入力してください：<br>
+                        <input type="text" name="sms" id="msg4" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength=12>
+                    </p>
+                    <p>SMS通知内容を入力してください：<br>
+                        <input type="text" name="message" id="msg5"></p>
+                    <p>
+                        <input type="button" value="QRコード生成" id="button4"></p>
+                    <div class="hide" id="qrCon4">
+                        <p>SMS通知QRコード：</p>
+                        <a class="imgContainer" id="qrSub4">
+                            <img id="qr4" src="css/images/blank.png"/>
+                            <img src="css/images/dnload.png" class="qrSub"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="warningW">* QRコードをクリックしてダウンロードできます！</div>
+    </div>
+</div>
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
