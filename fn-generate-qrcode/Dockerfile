@@ -2,8 +2,7 @@ FROM delabassee/fn-cache:latest as cache-stage
 
 FROM openjdk:13 as build-stage
 WORKDIR /function
-#RUN curl https://www.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -o apache-maven-3.6.3-bin.tar.gz
-RUN curl ftp://ftp.meisei-u.ac.jp/mirror/apache/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -o apache-maven-3.6.3-bin.tar.gz
+RUN curl https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.3/apache-maven-3.6.3-bin.tar.gz -o apache-maven-3.6.3-bin.tar.gz
 RUN tar -zxvf apache-maven-3.6.3-bin.tar.gz
 
 ENV PATH="/function/apache-maven-3.6.3/bin:${PATH}"
