@@ -1,12 +1,7 @@
 FROM delabassee/fn-cache:latest as cache-stage
 
-FROM openjdk:13 as build-stage
+FROM maven:3.6.3-jdk-13 as build-stage 
 WORKDIR /function
-#RUN curl https://www.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -o apache-maven-3.6.3-bin.tar.gz
-RUN curl ftp://ftp.meisei-u.ac.jp/mirror/apache/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -o apache-maven-3.6.3-bin.tar.gz
-RUN tar -zxvf apache-maven-3.6.3-bin.tar.gz
-
-ENV PATH="/function/apache-maven-3.6.3/bin:${PATH}"
 
 ENV MAVEN_OPTS -Dhttp.proxyHost= -Dhttp.proxyPort= -Dhttps.proxyHost= -Dhttps.proxyPort= -Dhttp.nonProxyHosts= -Dmaven.repo.local=/usr/share/maven/ref/repository
 ADD pom.xml /function/pom.xml
@@ -36,4 +31,3 @@ ENTRYPOINT [ "/function/fnjre/bin/java", \
     "com.fnproject.fn.runtime.EntryPoint" ]
 
 CMD ["com.example.fn.HelloFunction::handleRequest"]
-#CMD /bin/ash
